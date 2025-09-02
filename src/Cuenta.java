@@ -36,6 +36,7 @@ public class Cuenta {
     }
 
     public void imprimir(){
+        System.out.println("El saldo es: " + saldo);
         
     }
 
