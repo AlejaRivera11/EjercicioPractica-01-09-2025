@@ -3,9 +3,8 @@ public class Cuenta {
     protected float saldo;
     protected int numeroConsignaciones = 0;
     protected int numeroRetiros = 0;
-    protected float tasaAnual;
+    protected float tasaAnual = 1;
     protected float comisionMensual = 0;
-
 
     public Cuenta (float saldo, float tasaAnual){
     this.saldo = saldo;
@@ -25,10 +24,12 @@ public class Cuenta {
     }
 
     public void calcularInteres(){
-        
+        float interesMensual = saldo*(tasaAnual/(12*100));
+        this.saldo = saldo + interesMensual;
     }
 
     public void extractoMensual(){
+        
     }
 
     
