@@ -13,11 +13,14 @@ public class Cuenta {
 
     public void consignar(float cantidad){
         this.saldo = saldo + cantidad;
+        numeroConsignaciones = numeroConsignaciones + 1;
     }
 
     public void retirar (float cantidad){
+       // float nuevoSaldo = saldo - cantidad;
         if (saldo>=cantidad){
             this.saldo = saldo - cantidad;
+            numeroRetiros = numeroRetiros + 1;
         }else{
             System.out.println("Saldo insuficiente para este retiro");
         }
@@ -29,6 +32,10 @@ public class Cuenta {
     }
 
     public void extractoMensual(){
+        saldo = saldo - comisionMensual;
+    }
+
+    public void imprimir(){
         
     }
 
